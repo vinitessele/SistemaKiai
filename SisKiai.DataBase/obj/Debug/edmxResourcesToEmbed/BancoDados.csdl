@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bancodadosModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="associacao" EntityType="bancodadosModel.associacao" />
+    <EntitySet Name="categoria" EntityType="bancodadosModel.categoria" />
+    <EntitySet Name="categoria_competicao" EntityType="bancodadosModel.categoria_competicao" />
+    <EntitySet Name="cidade" EntityType="bancodadosModel.cidade" />
+    <EntitySet Name="competicao" EntityType="bancodadosModel.competicao" />
+    <EntitySet Name="contasa_receber" EntityType="bancodadosModel.contasa_receber" />
+    <EntitySet Name="esporte" EntityType="bancodadosModel.esporte" />
+    <EntitySet Name="estado" EntityType="bancodadosModel.estado" />
+    <EntitySet Name="filiado" EntityType="bancodadosModel.filiado" />
+    <EntitySet Name="graduacao" EntityType="bancodadosModel.graduacao" />
+    <EntitySet Name="graduacao_filiado" EntityType="bancodadosModel.graduacao_filiado" />
+    <EntitySet Name="inscricao_categoria" EntityType="bancodadosModel.inscricao_categoria" />
+    <EntitySet Name="inscricao_competicao" EntityType="bancodadosModel.inscricao_competicao" />
+    <EntitySet Name="inscricao_filiado" EntityType="bancodadosModel.inscricao_filiado" />
+    <EntitySet Name="login" EntityType="bancodadosModel.login" />
+    <EntitySet Name="login_tela" EntityType="bancodadosModel.login_tela" />
+    <EntitySet Name="telas" EntityType="bancodadosModel.telas" />
+    <EntitySet Name="tipo_contas" EntityType="bancodadosModel.tipo_contas" />
+  </EntityContainer>
+  <EntityType Name="associacao">
+    <Key>
+      <PropertyRef Name="ID_ASSOCIACAO" />
+    </Key>
+    <Property Type="Int64" Name="ID_ASSOCIACAO" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CIDADE_ID_CIDADE" Nullable="false" />
+    <Property Type="Int64" Name="ESPORTE_ID_ESPORTE" Nullable="false" />
+    <Property Type="String" Name="NOME_ASSOCIACAO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ENDERECO_ASSOCIACAO" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOME_RESPONSAVEL_ASSOCIACAO" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TELEFONE_FIXO_ASSOCIACAO" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TELEFONE_CELULAR_ASSOCIACAO" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMAIL_ASSOCIACAO" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CNPJ_ASSOCIACAO" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INSCRICAO_ASSOCIACAO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CEP_CIDADE" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="ID_CATEGORIA" />
+    </Key>
+    <Property Type="Int64" Name="ID_CATEGORIA" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ESPORTE_ID_ESPORTE" Nullable="false" />
+    <Property Type="Int64" Name="GRADUACAO_ID_GRADUACAO" Nullable="false" />
+    <Property Type="String" Name="DESCRICAO_CATEGORIA" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEXO_CATEGORIA" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIPO_CATEGORIA" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ALTURA_INICIAL_CATEGORIA" />
+    <Property Type="Decimal" Name="ALTURA_FINAL_CATEGORIA" />
+    <Property Type="Decimal" Name="PESO_INICIAL_CATEGORIA" />
+    <Property Type="Decimal" Name="PESO_FINAL_CATEGORIA" />
+    <Property Type="Int64" Name="GRADUACAO_FINAL" />
+    <Property Type="Boolean" Name="STATUS_CATEGORIA" />
+    <Property Type="Int32" Name="IDADE_INICIAL" />
+    <Property Type="Int32" Name="IDADE_FINAL" />
+  </EntityType>
+  <EntityType Name="categoria_competicao">
+    <Key>
+      <PropertyRef Name="ID_CATEGORIA_COMPETICAO" />
+    </Key>
+    <Property Type="Int64" Name="ID_CATEGORIA_COMPETICAO" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="COMPETICAO_ESPORTE_ID_ESPORTE" Nullable="false" />
+    <Property Type="Int64" Name="ID_COMPETICAO" />
+    <Property Type="Int64" Name="ID_CATEGORIA" />
+  </EntityType>
+  <EntityType Name="cidade">
+    <Key>
+      <PropertyRef Name="ID_CIDADE" />
+    </Key>
+    <Property Type="Int64" Name="ID_CIDADE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="NOME_CIDADE" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="ID_ESTADO" />
+    <Property Type="String" Name="CEP_CIDADE" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="competicao">
+    <Key>
+      <PropertyRef Name="ID_COMPETICAO" />
+      <PropertyRef Name="ESPORTE_ID_ESPORTE" />
+    </Key>
+    <Property Type="Int64" Name="ID_COMPETICAO" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ESPORTE_ID_ESPORTE" Nullable="false" />
+    <Property Type="String" Name="NOME_COMPETICAO" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRICAO_COMPETICAO" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="ID_CIDADE" />
+    <Property Type="String" Name="ENDERECO_COMPETICAO" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CEP_COMPETICAO" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DATA_COMPETICAO" />
+    <Property Type="Boolean" Name="CARTAZ_COMPETICAO" />
+    <Property Type="String" Name="RESPONSAVEL" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TELEFONE_CELULAR" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DATA_LIMITE_INSCRICAO" />
+    <Property Type="Decimal" Name="VALOR_COMPETICAO" />
+    <Property Type="String" Name="STATUS_COMPETICAO" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="contasa_receber">
+    <Key>
+      <PropertyRef Name="ID_CONTASRECEBER" />
+    </Key>
+    <Property Type="Int64" Name="ID_CONTASRECEBER" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="FILIADO_ID_FILIADO" Nullable="false" />
+    <Property Type="Int64" Name="TIPO_CONTAS_ID_TIPOCONTAS" Nullable="false" />
+    <Property Type="Decimal" Name="DATA_RECEBIMENTO" />
+    <Property Type="Decimal" Name="VALOR_RECEBIMENTO" />
+    <Property Type="String" Name="STATUS_RECEBIMENTO" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRICAO_RECEBIMENTO" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="esporte">
+    <Key>
+      <PropertyRef Name="ID_ESPORTE" />
+    </Key>
+    <Property Type="Int64" Name="ID_ESPORTE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="NOME_ESPORTE" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="estado">
+    <Key>
+      <PropertyRef Name="ID_ESTADO" />
+    </Key>
+    <Property Type="Int64" Name="ID_ESTADO" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="NOME_ESTADO" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIGLA_ESTADO" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="filiado">
+    <Key>
+      <PropertyRef Name="ID_FILIADO" />
+    </Key>
+    <Property Type="Int64" Name="ID_FILIADO" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ASSOCIACAO_ID_ASSOCIACAO" Nullable="false" />
+    <Property Type="Int64" Name="CIDADE_ID_CIDADE" Nullable="false" />
+    <Property Type="String" Name="NOME_FILIADO" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ENDERECO_FILIADO" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TELEFONE_FIXO_FILIADO" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TELEFONE_CELULAR_FILIADO" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMAIL_FILIADO" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CPF_FILIADO" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RG_FILIADO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DATA_NASCIMENTO_FILIADO" />
+    <Property Type="Int64" Name="IDADE_FILIADO" />
+    <Property Type="Decimal" Name="PESO_FILIADO" />
+    <Property Type="Decimal" Name="ALTURA_FILIADO" />
+    <Property Type="String" Name="SEXO_FILIADO" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIPO_FILIADO" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CEP_CIDADE" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="graduacao">
+    <Key>
+      <PropertyRef Name="ID_GRADUACAO" />
+    </Key>
+    <Property Type="Int64" Name="ID_GRADUACAO" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ESPORTE_ID_ESPORTE" Nullable="false" />
+    <Property Type="String" Name="DESCRICAO_GRADUACAO" MaxLength="70" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="graduacao_filiado">
+    <Key>
+      <PropertyRef Name="ID_GRADUACAO_FILIADO" />
+    </Key>
+    <Property Type="Int64" Name="ID_GRADUACAO_FILIADO" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="GRADUACAO_ID_GRADUACAO" Nullable="false" />
+    <Property Type="String" Name="DESCRICAO_GRADUACAO" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DATA_GRADUACAO" />
+    <Property Type="Int64" Name="ID_FILIADO" />
+  </EntityType>
+  <EntityType Name="inscricao_categoria">
+    <Key>
+      <PropertyRef Name="ID_INSCRICAO_CATEGORIA" />
+    </Key>
+    <Property Type="Int64" Name="ID_INSCRICAO_CATEGORIA" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CATEGORIA_COMPETICAO_ID_CATEGORIA_COMPETICAO" Nullable="false" />
+    <Property Type="Int64" Name="INSCRICAO_FILIADO_IDINSCRICAOFILIADO" Nullable="false" />
+  </EntityType>
+  <EntityType Name="inscricao_competicao">
+    <Key>
+      <PropertyRef Name="ID_INSCRICAO_COMPETICAO" />
+    </Key>
+    <Property Type="Int64" Name="ID_INSCRICAO_COMPETICAO" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ASSOCIACAO_ID_ASSOCIACAO" Nullable="false" />
+    <Property Type="Int64" Name="LOGIN_ID_LOGIN" Nullable="false" />
+    <Property Type="Int64" Name="COMPETICAO_ESPORTE_ID_ESPORTE" Nullable="false" />
+    <Property Type="Int64" Name="COMPETICAO_ID_COMPETICAO" Nullable="false" />
+    <Property Type="Decimal" Name="VALOR_INSCRICAO" />
+    <Property Type="DateTime" Name="DATA_INSCRICAO" />
+    <Property Type="Decimal" Name="CONFIRMACAO_PAGAMENTO" />
+    <Property Type="String" Name="STATUS_INSCRICAO" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="inscricao_filiado">
+    <Key>
+      <PropertyRef Name="IDINSCRICAOFILIADO" />
+    </Key>
+    <Property Type="Int64" Name="IDINSCRICAOFILIADO" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="FILIADO_ID_FILIADO" Nullable="false" />
+    <Property Type="Int64" Name="INSCRICAO_COMPETICAO_ID_INSCRICAO_COMPETICAO" Nullable="false" />
+    <Property Type="Decimal" Name="VALOR_INSCRICAO" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="ID_LOGIN" />
+    </Key>
+    <Property Type="Int64" Name="ID_LOGIN" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ASSOCIACAO_ID_ASSOCIACAO" Nullable="false" />
+    <Property Type="String" Name="NOME_LOGIN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USUARIO_LOGIN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SENHA_LOGIN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS_LOGIN" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADMIN_LOGIN" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="login_tela">
+    <Key>
+      <PropertyRef Name="IDLOGINTELA" />
+      <PropertyRef Name="LOGIN_ID_LOGIN" />
+    </Key>
+    <Property Type="Int64" Name="IDLOGINTELA" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="LOGIN_ID_LOGIN" Nullable="false" />
+    <Property Type="Int32" Name="TELAS_IDTELAS" Nullable="false" />
+  </EntityType>
+  <EntityType Name="telas">
+    <Key>
+      <PropertyRef Name="IDTELAS" />
+    </Key>
+    <Property Type="Int32" Name="IDTELAS" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="NOME_TELA" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ENDERECO_TELAS" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tipo_contas">
+    <Key>
+      <PropertyRef Name="ID_TIPOCONTAS" />
+    </Key>
+    <Property Type="Int64" Name="ID_TIPOCONTAS" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DESCRICAO_TIPO_CONTAS" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIPO_CONTAS1" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

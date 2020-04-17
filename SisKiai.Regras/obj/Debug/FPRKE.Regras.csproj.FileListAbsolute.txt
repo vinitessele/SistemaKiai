@@ -1,0 +1,13 @@
+C:\Documentos\FPRKE\FPRKE\FPRKE.Regras\bin\Debug\FPRKE.Regras.dll
+C:\Documentos\FPRKE\FPRKE\FPRKE.Regras\bin\Debug\FPRKE.Regras.pdb
+C:\Documentos\FPRKE\FPRKE\FPRKE.Regras\obj\Debug\ResolveAssemblyReference.cache
+C:\Documentos\FPRKE\FPRKE\FPRKE.Regras\obj\Debug\FPRKE.Regras.dll
+C:\Documentos\FPRKE\FPRKE\FPRKE.Regras\obj\Debug\FPRKE.Regras.pdb
+C:\Documentos\FPRKE\FPRKE.Regras\bin\Debug\FPRKE.Regras.dll
+C:\Documentos\FPRKE\FPRKE.Regras\bin\Debug\FPRKE.Regras.pdb
+C:\Documentos\FPRKE\FPRKE.Regras\obj\Debug\FPRKE.Regras.dll
+C:\Documentos\FPRKE\FPRKE.Regras\obj\Debug\FPRKE.Regras.pdb
+C:\Documentos\FPRKE\FPRKE.Regras\bin\Debug\FPRKE.DataBase.dll
+C:\Documentos\FPRKE\FPRKE.Regras\bin\Debug\FPRKE.DataBase.pdb
+C:\Documentos\FPRKE\FPRKE.Regras\obj\Debug\FPRKE.Regras.csprojResolveAssemblyReference.cache
+C:\Documentos\FPRKE\FPRKE.Regras\bin\Debug\FPRKE.Regras.dll.config

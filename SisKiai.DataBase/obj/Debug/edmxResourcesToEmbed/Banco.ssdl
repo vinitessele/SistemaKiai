@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bancodadosfprkeModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="bancodadosfprkeModelStoreContainer">
+    <EntitySet Name="ASSOCIACAO" EntityType="bancodadosfprkeModel.Store.ASSOCIACAO" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="CATEGORIA" EntityType="bancodadosfprkeModel.Store.CATEGORIA" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="CATEGORIA_COMPETICAO" EntityType="bancodadosfprkeModel.Store.CATEGORIA_COMPETICAO" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="CIDADE" EntityType="bancodadosfprkeModel.Store.CIDADE" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="COMPETICAO" EntityType="bancodadosfprkeModel.Store.COMPETICAO" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="ESPORTE" EntityType="bancodadosfprkeModel.Store.ESPORTE" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="ESTADO" EntityType="bancodadosfprkeModel.Store.ESTADO" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="FILIADO" EntityType="bancodadosfprkeModel.Store.FILIADO" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="GRADUACAO" EntityType="bancodadosfprkeModel.Store.GRADUACAO" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="GRADUACAO_FILIADO" EntityType="bancodadosfprkeModel.Store.GRADUACAO_FILIADO" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="IMAGENS" EntityType="bancodadosfprkeModel.Store.IMAGENS" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="INSCRICAO_CATEGORIA_ATLETA" EntityType="bancodadosfprkeModel.Store.INSCRICAO_CATEGORIA_ATLETA" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="INSCRICAO_COMPETICAO_ASSOCIACAO" EntityType="bancodadosfprkeModel.Store.INSCRICAO_COMPETICAO_ASSOCIACAO" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="INSCRICAO_DO_ATLETA" EntityType="bancodadosfprkeModel.Store.INSCRICAO_DO_ATLETA" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="LOGIN" EntityType="bancodadosfprkeModel.Store.LOGIN" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="LOGIN_TELA" EntityType="bancodadosfprkeModel.Store.LOGIN_TELA" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="MENSAGEM_PRESIDENTE" EntityType="bancodadosfprkeModel.Store.MENSAGEM_PRESIDENTE" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="RANKING" EntityType="bancodadosfprkeModel.Store.RANKING" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="TELAS" EntityType="bancodadosfprkeModel.Store.TELAS" store:Type="Tables" Schema="bancodadosfprke" />
+    <EntitySet Name="TIPO_COMPETICAO" EntityType="bancodadosfprkeModel.Store.TIPO_COMPETICAO" store:Type="Tables" Schema="bancodadosfprke" />
+    <AssociationSet Name="ASSOCIACAO_ibfk_1" Association="bancodadosfprkeModel.Store.ASSOCIACAO_ibfk_1">
+      <End Role="ESPORTE" EntitySet="ESPORTE" />
+      <End Role="ASSOCIACAO" EntitySet="ASSOCIACAO" />
+    </AssociationSet>
+    <AssociationSet Name="ASSOCIACAO_ibfk_2" Association="bancodadosfprkeModel.Store.ASSOCIACAO_ibfk_2">
+      <End Role="CIDADE" EntitySet="CIDADE" />
+      <End Role="ASSOCIACAO" EntitySet="ASSOCIACAO" />
+    </AssociationSet>
+    <AssociationSet Name="CATEGORIA_COMPETICAO_ibfk_1" Association="bancodadosfprkeModel.Store.CATEGORIA_COMPETICAO_ibfk_1">
+      <End Role="COMPETICAO" EntitySet="COMPETICAO" />
+      <End Role="CATEGORIA_COMPETICAO" EntitySet="CATEGORIA_COMPETICAO" />
+    </AssociationSet>
+    <AssociationSet Name="CATEGORIA_COMPETICAO_ibfk_2" Association="bancodadosfprkeModel.Store.CATEGORIA_COMPETICAO_ibfk_2">
+      <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+      <End Role="CATEGORIA_COMPETICAO" EntitySet="CATEGORIA_COMPETICAO" />
+    </AssociationSet>
+    <AssociationSet Name="CATEGORIA_COMPETICAO_ibfk_3" Association="bancodadosfprkeModel.Store.CATEGORIA_COMPETICAO_ibfk_3">
+      <End Role="ESPORTE" EntitySet="ESPORTE" />
+      <End Role="CATEGORIA_COMPETICAO" EntitySet="CATEGORIA_COMPETICAO" />
+    </AssociationSet>
+    <AssociationSet Name="CATEGORIA_ibfk_1" Association="bancodadosfprkeModel.Store.CATEGORIA_ibfk_1">
+      <End Role="GRADUACAO" EntitySet="GRADUACAO" />
+      <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+    </AssociationSet>
+    <AssociationSet Name="CATEGORIA_ibfk_2" Association="bancodadosfprkeModel.Store.CATEGORIA_ibfk_2">
+      <End Role="GRADUACAO" EntitySet="GRADUACAO" />
+      <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+    </AssociationSet>
+    <AssociationSet Name="CATEGORIA_ibfk_3" Association="bancodadosfprkeModel.Store.CATEGORIA_ibfk_3">
+      <End Role="ESPORTE" EntitySet="ESPORTE" />
+      <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+    </AssociationSet>
+    <AssociationSet Name="CATEGORIA_ibfk_4" Association="bancodadosfprkeModel.Store.CATEGORIA_ibfk_4">
+      <End Role="TIPO_COMPETICAO" EntitySet="TIPO_COMPETICAO" />
+      <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+    </AssociationSet>
+    <AssociationSet Name="CIDADE_ibfk_1" Association="bancodadosfprkeModel.Store.CIDADE_ibfk_1">
+      <End Role="ESTADO" EntitySet="ESTADO" />
+      <End Role="CIDADE" EntitySet="CIDADE" />
+    </AssociationSet>
+    <AssociationSet Name="COMPETICAO_ibfk_1" Association="bancodadosfprkeModel.Store.COMPETICAO_ibfk_1">
+      <End Role="ESPORTE" EntitySet="ESPORTE" />
+      <End Role="COMPETICAO" EntitySet="COMPETICAO" />
+    </AssociationSet>
+    <AssociationSet Name="FILIADO_ibfk_1" Association="bancodadosfprkeModel.Store.FILIADO_ibfk_1">
+      <End Role="CIDADE" EntitySet="CIDADE" />
+      <End Role="FILIADO" EntitySet="FILIADO" />
+    </AssociationSet>
+    <AssociationSet Name="FILIADO_ibfk_2" Association="bancodadosfprkeModel.Store.FILIADO_ibfk_2">
+      <End Role="ASSOCIACAO" EntitySet="ASSOCIACAO" />
+      <End Role="FILIADO" EntitySet="FILIADO" />
+    </AssociationSet>
+    <AssociationSet Name="GRADUACAO_FILIADO_ibfk_1" Association="bancodadosfprkeModel.Store.GRADUACAO_FILIADO_ibfk_1">
+      <End Role="FILIADO" EntitySet="FILIADO" />
+      <End Role="GRADUACAO_FILIADO" EntitySet="GRADUACAO_FILIADO" />
+    </AssociationSet>
+    <AssociationSet Name="GRADUACAO_FILIADO_ibfk_2" Association="bancodadosfprkeModel.Store.GRADUACAO_FILIADO_ibfk_2">
+      <End Role="GRADUACAO" EntitySet="GRADUACAO" />
+      <End Role="GRADUACAO_FILIADO" EntitySet="GRADUACAO_FILIADO" />
+    </AssociationSet>
+    <AssociationSet Name="GRADUACAO_ibfk_1" Association="bancodadosfprkeModel.Store.GRADUACAO_ibfk_1">
+      <End Role="ESPORTE" EntitySet="ESPORTE" />
+      <End Role="GRADUACAO" EntitySet="GRADUACAO" />
+    </AssociationSet>
+    <AssociationSet Name="INSCRICAO_CATEGORIA_ATLETA_ibfk_1" Association="bancodadosfprkeModel.Store.INSCRICAO_CATEGORIA_ATLETA_ibfk_1">
+      <End Role="INSCRICAO_DO_ATLETA" EntitySet="INSCRICAO_DO_ATLETA" />
+      <End Role="INSCRICAO_CATEGORIA_ATLETA" EntitySet="INSCRICAO_CATEGORIA_ATLETA" />
+    </AssociationSet>
+    <AssociationSet Name="INSCRICAO_CATEGORIA_ATLETA_ibfk_2" Association="bancodadosfprkeModel.Store.INSCRICAO_CATEGORIA_ATLETA_ibfk_2">
+      <End Role="CATEGORIA_COMPETICAO" EntitySet="CATEGORIA_COMPETICAO" />
+      <End Role="INSCRICAO_CATEGORIA_ATLETA" EntitySet="INSCRICAO_CATEGORIA_ATLETA" />
+    </AssociationSet>
+    <AssociationSet Name="INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_1" Association="bancodadosfprkeModel.Store.INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_1">
+      <End Role="LOGIN" EntitySet="LOGIN" />
+      <End Role="INSCRICAO_COMPETICAO_ASSOCIACAO" EntitySet="INSCRICAO_COMPETICAO_ASSOCIACAO" />
+    </AssociationSet>
+    <AssociationSet Name="INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_2" Association="bancodadosfprkeModel.Store.INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_2">
+      <End Role="COMPETICAO" EntitySet="COMPETICAO" />
+      <End Role="INSCRICAO_COMPETICAO_ASSOCIACAO" EntitySet="INSCRICAO_COMPETICAO_ASSOCIACAO" />
+    </AssociationSet>
+    <AssociationSet Name="INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_3" Association="bancodadosfprkeModel.Store.INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_3">
+      <End Role="ASSOCIACAO" EntitySet="ASSOCIACAO" />
+      <End Role="INSCRICAO_COMPETICAO_ASSOCIACAO" EntitySet="INSCRICAO_COMPETICAO_ASSOCIACAO" />
+    </AssociationSet>
+    <AssociationSet Name="INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_4" Association="bancodadosfprkeModel.Store.INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_4">
+      <End Role="ESPORTE" EntitySet="ESPORTE" />
+      <End Role="INSCRICAO_COMPETICAO_ASSOCIACAO" EntitySet="INSCRICAO_COMPETICAO_ASSOCIACAO" />
+    </AssociationSet>
+    <AssociationSet Name="INSCRICAO_DO_ATLETA_ibfk_1" Association="bancodadosfprkeModel.Store.INSCRICAO_DO_ATLETA_ibfk_1">
+      <End Role="INSCRICAO_COMPETICAO_ASSOCIACAO" EntitySet="INSCRICAO_COMPETICAO_ASSOCIACAO" />
+      <End Role="INSCRICAO_DO_ATLETA" EntitySet="INSCRICAO_DO_ATLETA" />
+    </AssociationSet>
+    <AssociationSet Name="INSCRICAO_DO_ATLETA_ibfk_2" Association="bancodadosfprkeModel.Store.INSCRICAO_DO_ATLETA_ibfk_2">
+      <End Role="FILIADO" EntitySet="FILIADO" />
+      <End Role="INSCRICAO_DO_ATLETA" EntitySet="INSCRICAO_DO_ATLETA" />
+    </AssociationSet>
+    <AssociationSet Name="INSCRICAO_DO_ATLETA_ibfk_3" Association="bancodadosfprkeModel.Store.INSCRICAO_DO_ATLETA_ibfk_3">
+      <End Role="COMPETICAO" EntitySet="COMPETICAO" />
+      <End Role="INSCRICAO_DO_ATLETA" EntitySet="INSCRICAO_DO_ATLETA" />
+    </AssociationSet>
+    <AssociationSet Name="INSCRICAO_DO_ATLETA_ibfk_4" Association="bancodadosfprkeModel.Store.INSCRICAO_DO_ATLETA_ibfk_4">
+      <End Role="ASSOCIACAO" EntitySet="ASSOCIACAO" />
+      <End Role="INSCRICAO_DO_ATLETA" EntitySet="INSCRICAO_DO_ATLETA" />
+    </AssociationSet>
+    <AssociationSet Name="LOGIN_ibfk_1" Association="bancodadosfprkeModel.Store.LOGIN_ibfk_1">
+      <End Role="ASSOCIACAO" EntitySet="ASSOCIACAO" />
+      <End Role="LOGIN" EntitySet="LOGIN" />
+    </AssociationSet>
+    <AssociationSet Name="LOGIN_TELA_ibfk_1" Association="bancodadosfprkeModel.Store.LOGIN_TELA_ibfk_1">
+      <End Role="LOGIN" EntitySet="LOGIN" />
+      <End Role="LOGIN_TELA" EntitySet="LOGIN_TELA" />
+    </AssociationSet>
+    <AssociationSet Name="LOGIN_TELA_ibfk_2" Association="bancodadosfprkeModel.Store.LOGIN_TELA_ibfk_2">
+      <End Role="TELAS" EntitySet="TELAS" />
+      <End Role="LOGIN_TELA" EntitySet="LOGIN_TELA" />
+    </AssociationSet>
+    <AssociationSet Name="RANKING_ibfk_1" Association="bancodadosfprkeModel.Store.RANKING_ibfk_1">
+      <End Role="FILIADO" EntitySet="FILIADO" />
+      <End Role="RANKING" EntitySet="RANKING" />
+    </AssociationSet>
+    <AssociationSet Name="TIPO_COMPETICAO_ibfk_1" Association="bancodadosfprkeModel.Store.TIPO_COMPETICAO_ibfk_1">
+      <End Role="ESPORTE" EntitySet="ESPORTE" />
+      <End Role="TIPO_COMPETICAO" EntitySet="TIPO_COMPETICAO" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ASSOCIACAO">
+    <Key>
+      <PropertyRef Name="ID_ASSOCIACAO" />
+    </Key>
+    <Property Name="ID_ASSOCIACAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CIDADE_ID_CIDADE" Type="uint" Nullable="false" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="NOME_ASSOCIACAO" Type="varchar" MaxLength="100" />
+    <Property Name="SIGLA_ASSOCIACAO" Type="varchar" MaxLength="10" />
+    <Property Name="ENDERECO_ASSOCIACAO" Type="varchar" MaxLength="150" />
+    <Property Name="NOME_RESPONSAVEL_ASSOCIACAO" Type="varchar" MaxLength="70" />
+    <Property Name="TELEFONE_FIXO_ASSOCIACAO" Type="varchar" MaxLength="15" />
+    <Property Name="TELEFONE_CELULAR_ASSOCIACAO" Type="varchar" MaxLength="15" />
+    <Property Name="EMAIL_ASSOCIACAO" Type="varchar" MaxLength="150" />
+    <Property Name="CNPJ_ASSOCIACAO" Type="varchar" MaxLength="18" />
+    <Property Name="INSCRICAO_ASSOCIACAO" Type="varchar" MaxLength="20" />
+    <Property Name="CEP_CIDADE" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CATEGORIA">
+    <Key>
+      <PropertyRef Name="ID_CATEGORIA" />
+    </Key>
+    <Property Name="ID_CATEGORIA" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NUMERO_CATEGORIA" Type="int" />
+    <Property Name="TIPO_COMPETICAO_ID_TIPO_COMPETICAO" Type="uint" Nullable="false" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="GRADUACAO_ID_GRADUACAO" Type="uint" Nullable="false" />
+    <Property Name="DESCRICAO_CATEGORIA" Type="varchar" MaxLength="70" />
+    <Property Name="SEXO_CATEGORIA" Type="char" MaxLength="1" />
+    <Property Name="TIPO_CATEGORIA" Type="varchar" MaxLength="30" />
+    <Property Name="ALTURA_INICIAL_CATEGORIA" Type="decimal" Scale="2" />
+    <Property Name="ALTURA_FINAL_CATEGORIA" Type="decimal" Scale="2" />
+    <Property Name="PESO_INICIAL_CATEGORIA" Type="decimal" Scale="2" />
+    <Property Name="PESO_FINAL_CATEGORIA" Type="decimal" Scale="2" />
+    <Property Name="GRADUACAO_FINAL" Type="uint" />
+    <Property Name="STATUS_CATEGORIA" Type="bool" />
+    <Property Name="IDADE_INICIAL" Type="int" />
+    <Property Name="IDADE_FINAL" Type="int" />
+  </EntityType>
+  <EntityType Name="CATEGORIA_COMPETICAO">
+    <Key>
+      <PropertyRef Name="ID_CATEGORIA_COMPETICAO" />
+    </Key>
+    <Property Name="ID_CATEGORIA_COMPETICAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="ID_COMPETICAO" Type="uint" />
+    <Property Name="ID_CATEGORIA" Type="uint" />
+    <Property Name="CATEGORIA_FINALIZADA" Type="bool" />
+  </EntityType>
+  <EntityType Name="CIDADE">
+    <Key>
+      <PropertyRef Name="ID_CIDADE" />
+    </Key>
+    <Property Name="ID_CIDADE" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOME_CIDADE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_ESTADO" Type="uint" />
+    <Property Name="CEP_CIDADE" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="COMPETICAO">
+    <Key>
+      <PropertyRef Name="ID_COMPETICAO" />
+    </Key>
+    <Property Name="ID_COMPETICAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="NOME_COMPETICAO" Type="varchar" MaxLength="70" />
+    <Property Name="DESCRICAO_COMPETICAO" Type="varchar" MaxLength="70" />
+    <Property Name="ID_CIDADE" Type="uint" />
+    <Property Name="ENDERECO_COMPETICAO" Type="varchar" MaxLength="70" />
+    <Property Name="CEP_COMPETICAO" Type="varchar" MaxLength="10" />
+    <Property Name="DATA_COMPETICAO" Type="date" />
+    <Property Name="CARTAZ_COMPETICAO" Type="bit" />
+    <Property Name="RESPONSAVEL" Type="varchar" MaxLength="50" />
+    <Property Name="TELEFONE_CELULAR" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="DATA_LIMITE_INSCRICAO" Type="date" />
+    <Property Name="VALOR_COMPETICAO" Type="decimal" Scale="2" />
+    <Property Name="STATUS_COMPETICAO" Type="bool" />
+    <Property Name="PERMITE_NAO_FILIADO" Type="bool" />
+    <Property Name="VALOR_RANKING_ASSOCIACAO" Type="uint" />
+    <Property Name="VALOR_RANKING_1_COLOCADO" Type="uint" />
+    <Property Name="VALOR_RANKING_2_COLOCADO" Type="uint" />
+    <Property Name="VALOR_RANKING_3_COLOCADO" Type="uint" />
+    <Property Name="VALOR_RANKING_4_COLOCADO" Type="uint" />
+    <Property Name="VALOR_RANKING_5_COLOCADO" Type="uint" />
+    <Property Name="IMAGEM" Type="blob" />
+    <Property Name="VALOR_RANKING_PARTICIPACAO" Type="uint" />
+    <Property Name="PARTICIPA_RANKING" Type="bool" />
+  </EntityType>
+  <EntityType Name="ESPORTE">
+    <Key>
+      <PropertyRef Name="ID_ESPORTE" />
+    </Key>
+    <Property Name="ID_ESPORTE" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOME_ESPORTE" Type="varchar" MaxLength="50" />
+    <Property Name="GERA_RANKING" Type="bool" />
+  </EntityType>
+  <EntityType Name="ESTADO">
+    <Key>
+      <PropertyRef Name="ID_ESTADO" />
+    </Key>
+    <Property Name="ID_ESTADO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOME_ESTADO" Type="varchar" MaxLength="70" />
+    <Property Name="SIGLA_ESTADO" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="FILIADO">
+    <Key>
+      <PropertyRef Name="ID_FILIADO" />
+    </Key>
+    <Property Name="ID_FILIADO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ASSOCIACAO_ID_ASSOCIACAO" Type="uint" Nullable="false" />
+    <Property Name="CIDADE_ID_CIDADE" Type="uint" Nullable="false" />
+    <Property Name="NUMERO_REGISTRO_FILIADO" Type="uint" />
+    <Property Name="NOME_FILIADO" Type="varchar" MaxLength="70" />
+    <Property Name="ENDERECO_FILIADO" Type="varchar" MaxLength="70" />
+    <Property Name="TELEFONE_FIXO_FILIADO" Type="varchar" MaxLength="15" />
+    <Property Name="TELEFONE_CELULAR_FILIADO" Type="varchar" MaxLength="15" />
+    <Property Name="EMAIL_FILIADO" Type="varchar" MaxLength="70" />
+    <Property Name="CPF_FILIADO" Type="varchar" MaxLength="14" />
+    <Property Name="RG_FILIADO" Type="varchar" MaxLength="20" />
+    <Property Name="DATA_NASCIMENTO_FILIADO" Type="date" />
+    <Property Name="IDADE_FILIADO" Type="uint" />
+    <Property Name="PESO_FILIADO" Type="decimal" Scale="2" />
+    <Property Name="ALTURA_FILIADO" Type="decimal" Scale="2" />
+    <Property Name="SEXO_FILIADO" Type="char" MaxLength="1" />
+    <Property Name="TIPO_FILIADO" Type="char" MaxLength="10" />
+    <Property Name="CEP_CIDADE" Type="varchar" MaxLength="10" />
+    <Property Name="STATUS_FILIADO" Type="char" MaxLength="1" />
+    <Property Name="IMAGEM" Type="blob" />
+  </EntityType>
+  <EntityType Name="GRADUACAO">
+    <Key>
+      <PropertyRef Name="ID_GRADUACAO" />
+    </Key>
+    <Property Name="ID_GRADUACAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="DESCRICAO_GRADUACAO" Type="varchar" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="GRADUACAO_FILIADO">
+    <Key>
+      <PropertyRef Name="ID_GRADUACAO_FILIADO" />
+    </Key>
+    <Property Name="ID_GRADUACAO_FILIADO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GRADUACAO_ID_GRADUACAO" Type="uint" Nullable="false" />
+    <Property Name="DESCRICAO_GRADUACAO" Type="varchar" MaxLength="70" />
+    <Property Name="DATA_GRADUACAO" Type="date" />
+    <Property Name="ID_FILIADO" Type="uint" Nullable="false" />
+    <Property Name="STATUS_GRADUACAO_FILIADO" Type="bool" />
+  </EntityType>
+  <EntityType Name="IMAGENS">
+    <Key>
+      <PropertyRef Name="ID_IMAGENS" />
+    </Key>
+    <Property Name="ID_IMAGENS" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IMAGENS" Type="blob" />
+    <Property Name="MENSAGEM" Type="varchar" MaxLength="144" />
+  </EntityType>
+  <EntityType Name="INSCRICAO_CATEGORIA_ATLETA">
+    <Key>
+      <PropertyRef Name="ID_INSCRICAO_CATEGORIA" />
+    </Key>
+    <Property Name="ID_INSCRICAO_CATEGORIA" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="INSCRICAO_DO_ATLETA_ID_INSCRICAO_ATLETA" Type="uint" Nullable="false" />
+    <Property Name="CATEGORIA_COMPETICAO_ID_CATEGORIA_COMPETICAO" Type="uint" Nullable="false" />
+    <Property Name="DATA_SORTEIO" Type="date" />
+    <Property Name="POSICAO_SORTEIO" Type="uint" />
+    <Property Name="RESULTADO_FINAL_CATEGORIA" Type="uint" />
+  </EntityType>
+  <EntityType Name="INSCRICAO_COMPETICAO_ASSOCIACAO">
+    <Key>
+      <PropertyRef Name="ID_INSCRICAO_COMPETICAO" />
+    </Key>
+    <Property Name="ID_INSCRICAO_COMPETICAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ASSOCIACAO_ID_ASSOCIACAO" Type="uint" Nullable="false" />
+    <Property Name="COMPETICAO_ID_COMPETICAO" Type="uint" Nullable="false" />
+    <Property Name="LOGIN_ID_LOGIN" Type="uint" Nullable="false" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="VALOR_INSCRICAO" Type="decimal" Scale="2" />
+    <Property Name="DATA_INSCRICAO" Type="date" />
+    <Property Name="CONFIRMACAO_PAGAMENTO" Type="decimal" Scale="2" />
+    <Property Name="STATUS_INSCRICAO" Type="bool" />
+  </EntityType>
+  <EntityType Name="INSCRICAO_DO_ATLETA">
+    <Key>
+      <PropertyRef Name="ID_INSCRICAO_ATLETA" />
+    </Key>
+    <Property Name="ID_INSCRICAO_ATLETA" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ASSOCIACAO_ID_ASSOCIACAO" Type="uint" Nullable="false" />
+    <Property Name="INSCRICAO_COMPETICAO_ASSOCIACAO_ID_INSCRICAO_COMPETICAO" Type="uint" Nullable="false" />
+    <Property Name="COMPETICAO_ID_COMPETICAO" Type="uint" Nullable="false" />
+    <Property Name="FILIADO_ID_FILIADO" Type="uint" />
+    <Property Name="NOME_ATLETA" Type="varchar" MaxLength="70" />
+    <Property Name="VALOR_INSCRICAO" Type="decimal" />
+    <Property Name="TIPO_INSCRICAO" Type="char" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="LOGIN">
+    <Key>
+      <PropertyRef Name="ID_LOGIN" />
+    </Key>
+    <Property Name="ID_LOGIN" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ASSOCIACAO_ID_ASSOCIACAO" Type="uint" />
+    <Property Name="NOME_LOGIN" Type="varchar" MaxLength="50" />
+    <Property Name="USUARIO_LOGIN" Type="varchar" MaxLength="50" />
+    <Property Name="SENHA_LOGIN" Type="varchar" MaxLength="50" />
+    <Property Name="STATUS_LOGIN" Type="bool" />
+    <Property Name="ADMIN_LOGIN" Type="bool" />
+  </EntityType>
+  <EntityType Name="LOGIN_TELA">
+    <Key>
+      <PropertyRef Name="IDLOGINTELA" />
+      <PropertyRef Name="LOGIN_ID_LOGIN" />
+    </Key>
+    <Property Name="IDLOGINTELA" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LOGIN_ID_LOGIN" Type="uint" Nullable="false" />
+    <Property Name="TELAS_IDTELAS" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MENSAGEM_PRESIDENTE">
+    <Key>
+      <PropertyRef Name="ID_MENSAGEM_PRESIDENTE" />
+    </Key>
+    <Property Name="ID_MENSAGEM_PRESIDENTE" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MENSAGEM_PRESIDENTE" Type="varchar" MaxLength="500" />
+    <Property Name="DATA_FINAL" Type="date" />
+    <Property Name="FINALIDADE" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="RANKING">
+    <Key>
+      <PropertyRef Name="ID_RANKING" />
+    </Key>
+    <Property Name="ID_RANKING" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FILIADO_ID_FILIADO" Type="uint" Nullable="false" />
+    <Property Name="PONTOS" Type="uint" />
+    <Property Name="ANO_RANKING" Type="uint" />
+    <Property Name="STATUS_RANKING" Type="bool" />
+    <Property Name="ID_ESPORTE" Type="uint" />
+  </EntityType>
+  <EntityType Name="TELAS">
+    <Key>
+      <PropertyRef Name="IDTELAS" />
+    </Key>
+    <Property Name="IDTELAS" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOME_TELA" Type="varchar" MaxLength="50" />
+    <Property Name="ENDERECO_TELAS" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TIPO_COMPETICAO">
+    <Key>
+      <PropertyRef Name="ID_TIPO_COMPETICAO" />
+    </Key>
+    <Property Name="ID_TIPO_COMPETICAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="DESCRICAO_COMPETICAO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="ASSOCIACAO_ibfk_1">
+    <End Role="ESPORTE" Type="bancodadosfprkeModel.Store.ESPORTE" Multiplicity="1" />
+    <End Role="ASSOCIACAO" Type="bancodadosfprkeModel.Store.ASSOCIACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESPORTE">
+        <PropertyRef Name="ID_ESPORTE" />
+      </Principal>
+      <Dependent Role="ASSOCIACAO">
+        <PropertyRef Name="ESPORTE_ID_ESPORTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ASSOCIACAO_ibfk_2">
+    <End Role="CIDADE" Type="bancodadosfprkeModel.Store.CIDADE" Multiplicity="1" />
+    <End Role="ASSOCIACAO" Type="bancodadosfprkeModel.Store.ASSOCIACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIDADE">
+        <PropertyRef Name="ID_CIDADE" />
+      </Principal>
+      <Dependent Role="ASSOCIACAO">
+        <PropertyRef Name="CIDADE_ID_CIDADE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CATEGORIA_COMPETICAO_ibfk_1">
+    <End Role="COMPETICAO" Type="bancodadosfprkeModel.Store.COMPETICAO" Multiplicity="0..1" />
+    <End Role="CATEGORIA_COMPETICAO" Type="bancodadosfprkeModel.Store.CATEGORIA_COMPETICAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPETICAO">
+        <PropertyRef Name="ID_COMPETICAO" />
+      </Principal>
+      <Dependent Role="CATEGORIA_COMPETICAO">
+        <PropertyRef Name="ID_COMPETICAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CATEGORIA_COMPETICAO_ibfk_2">
+    <End Role="CATEGORIA" Type="bancodadosfprkeModel.Store.CATEGORIA" Multiplicity="0..1" />
+    <End Role="CATEGORIA_COMPETICAO" Type="bancodadosfprkeModel.Store.CATEGORIA_COMPETICAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORIA">
+        <PropertyRef Name="ID_CATEGORIA" />
+      </Principal>
+      <Dependent Role="CATEGORIA_COMPETICAO">
+        <PropertyRef Name="ID_CATEGORIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CATEGORIA_COMPETICAO_ibfk_3">
+    <End Role="ESPORTE" Type="bancodadosfprkeModel.Store.ESPORTE" Multiplicity="1" />
+    <End Role="CATEGORIA_COMPETICAO" Type="bancodadosfprkeModel.Store.CATEGORIA_COMPETICAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESPORTE">
+        <PropertyRef Name="ID_ESPORTE" />
+      </Principal>
+      <Dependent Role="CATEGORIA_COMPETICAO">
+        <PropertyRef Name="ESPORTE_ID_ESPORTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CATEGORIA_ibfk_1">
+    <End Role="GRADUACAO" Type="bancodadosfprkeModel.Store.GRADUACAO" Multiplicity="0..1" />
+    <End Role="CATEGORIA" Type="bancodadosfprkeModel.Store.CATEGORIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GRADUACAO">
+        <PropertyRef Name="ID_GRADUACAO" />
+      </Principal>
+      <Dependent Role="CATEGORIA">
+        <PropertyRef Name="GRADUACAO_FINAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CATEGORIA_ibfk_2">
+    <End Role="GRADUACAO" Type="bancodadosfprkeModel.Store.GRADUACAO" Multiplicity="1" />
+    <End Role="CATEGORIA" Type="bancodadosfprkeModel.Store.CATEGORIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GRADUACAO">
+        <PropertyRef Name="ID_GRADUACAO" />
+      </Principal>
+      <Dependent Role="CATEGORIA">
+        <PropertyRef Name="GRADUACAO_ID_GRADUACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CATEGORIA_ibfk_3">
+    <End Role="ESPORTE" Type="bancodadosfprkeModel.Store.ESPORTE" Multiplicity="1" />
+    <End Role="CATEGORIA" Type="bancodadosfprkeModel.Store.CATEGORIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESPORTE">
+        <PropertyRef Name="ID_ESPORTE" />
+      </Principal>
+      <Dependent Role="CATEGORIA">
+        <PropertyRef Name="ESPORTE_ID_ESPORTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CATEGORIA_ibfk_4">
+    <End Role="TIPO_COMPETICAO" Type="bancodadosfprkeModel.Store.TIPO_COMPETICAO" Multiplicity="1" />
+    <End Role="CATEGORIA" Type="bancodadosfprkeModel.Store.CATEGORIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_COMPETICAO">
+        <PropertyRef Name="ID_TIPO_COMPETICAO" />
+      </Principal>
+      <Dependent Role="CATEGORIA">
+        <PropertyRef Name="TIPO_COMPETICAO_ID_TIPO_COMPETICAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CIDADE_ibfk_1">
+    <End Role="ESTADO" Type="bancodadosfprkeModel.Store.ESTADO" Multiplicity="0..1" />
+    <End Role="CIDADE" Type="bancodadosfprkeModel.Store.CIDADE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO">
+        <PropertyRef Name="ID_ESTADO" />
+      </Principal>
+      <Dependent Role="CIDADE">
+        <PropertyRef Name="ID_ESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COMPETICAO_ibfk_1">
+    <End Role="ESPORTE" Type="bancodadosfprkeModel.Store.ESPORTE" Multiplicity="1" />
+    <End Role="COMPETICAO" Type="bancodadosfprkeModel.Store.COMPETICAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESPORTE">
+        <PropertyRef Name="ID_ESPORTE" />
+      </Principal>
+      <Dependent Role="COMPETICAO">
+        <PropertyRef Name="ESPORTE_ID_ESPORTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FILIADO_ibfk_1">
+    <End Role="CIDADE" Type="bancodadosfprkeModel.Store.CIDADE" Multiplicity="1" />
+    <End Role="FILIADO" Type="bancodadosfprkeModel.Store.FILIADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIDADE">
+        <PropertyRef Name="ID_CIDADE" />
+      </Principal>
+      <Dependent Role="FILIADO">
+        <PropertyRef Name="CIDADE_ID_CIDADE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FILIADO_ibfk_2">
+    <End Role="ASSOCIACAO" Type="bancodadosfprkeModel.Store.ASSOCIACAO" Multiplicity="1" />
+    <End Role="FILIADO" Type="bancodadosfprkeModel.Store.FILIADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ASSOCIACAO">
+        <PropertyRef Name="ID_ASSOCIACAO" />
+      </Principal>
+      <Dependent Role="FILIADO">
+        <PropertyRef Name="ASSOCIACAO_ID_ASSOCIACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRADUACAO_FILIADO_ibfk_1">
+    <End Role="FILIADO" Type="bancodadosfprkeModel.Store.FILIADO" Multiplicity="1" />
+    <End Role="GRADUACAO_FILIADO" Type="bancodadosfprkeModel.Store.GRADUACAO_FILIADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FILIADO">
+        <PropertyRef Name="ID_FILIADO" />
+      </Principal>
+      <Dependent Role="GRADUACAO_FILIADO">
+        <PropertyRef Name="ID_FILIADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRADUACAO_FILIADO_ibfk_2">
+    <End Role="GRADUACAO" Type="bancodadosfprkeModel.Store.GRADUACAO" Multiplicity="1" />
+    <End Role="GRADUACAO_FILIADO" Type="bancodadosfprkeModel.Store.GRADUACAO_FILIADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GRADUACAO">
+        <PropertyRef Name="ID_GRADUACAO" />
+      </Principal>
+      <Dependent Role="GRADUACAO_FILIADO">
+        <PropertyRef Name="GRADUACAO_ID_GRADUACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRADUACAO_ibfk_1">
+    <End Role="ESPORTE" Type="bancodadosfprkeModel.Store.ESPORTE" Multiplicity="1" />
+    <End Role="GRADUACAO" Type="bancodadosfprkeModel.Store.GRADUACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESPORTE">
+        <PropertyRef Name="ID_ESPORTE" />
+      </Principal>
+      <Dependent Role="GRADUACAO">
+        <PropertyRef Name="ESPORTE_ID_ESPORTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSCRICAO_CATEGORIA_ATLETA_ibfk_1">
+    <End Role="INSCRICAO_DO_ATLETA" Type="bancodadosfprkeModel.Store.INSCRICAO_DO_ATLETA" Multiplicity="1" />
+    <End Role="INSCRICAO_CATEGORIA_ATLETA" Type="bancodadosfprkeModel.Store.INSCRICAO_CATEGORIA_ATLETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INSCRICAO_DO_ATLETA">
+        <PropertyRef Name="ID_INSCRICAO_ATLETA" />
+      </Principal>
+      <Dependent Role="INSCRICAO_CATEGORIA_ATLETA">
+        <PropertyRef Name="INSCRICAO_DO_ATLETA_ID_INSCRICAO_ATLETA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSCRICAO_CATEGORIA_ATLETA_ibfk_2">
+    <End Role="CATEGORIA_COMPETICAO" Type="bancodadosfprkeModel.Store.CATEGORIA_COMPETICAO" Multiplicity="1" />
+    <End Role="INSCRICAO_CATEGORIA_ATLETA" Type="bancodadosfprkeModel.Store.INSCRICAO_CATEGORIA_ATLETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORIA_COMPETICAO">
+        <PropertyRef Name="ID_CATEGORIA_COMPETICAO" />
+      </Principal>
+      <Dependent Role="INSCRICAO_CATEGORIA_ATLETA">
+        <PropertyRef Name="CATEGORIA_COMPETICAO_ID_CATEGORIA_COMPETICAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_1">
+    <End Role="LOGIN" Type="bancodadosfprkeModel.Store.LOGIN" Multiplicity="1" />
+    <End Role="INSCRICAO_COMPETICAO_ASSOCIACAO" Type="bancodadosfprkeModel.Store.INSCRICAO_COMPETICAO_ASSOCIACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOGIN">
+        <PropertyRef Name="ID_LOGIN" />
+      </Principal>
+      <Dependent Role="INSCRICAO_COMPETICAO_ASSOCIACAO">
+        <PropertyRef Name="LOGIN_ID_LOGIN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_2">
+    <End Role="COMPETICAO" Type="bancodadosfprkeModel.Store.COMPETICAO" Multiplicity="1" />
+    <End Role="INSCRICAO_COMPETICAO_ASSOCIACAO" Type="bancodadosfprkeModel.Store.INSCRICAO_COMPETICAO_ASSOCIACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPETICAO">
+        <PropertyRef Name="ID_COMPETICAO" />
+      </Principal>
+      <Dependent Role="INSCRICAO_COMPETICAO_ASSOCIACAO">
+        <PropertyRef Name="COMPETICAO_ID_COMPETICAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_3">
+    <End Role="ASSOCIACAO" Type="bancodadosfprkeModel.Store.ASSOCIACAO" Multiplicity="1" />
+    <End Role="INSCRICAO_COMPETICAO_ASSOCIACAO" Type="bancodadosfprkeModel.Store.INSCRICAO_COMPETICAO_ASSOCIACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ASSOCIACAO">
+        <PropertyRef Name="ID_ASSOCIACAO" />
+      </Principal>
+      <Dependent Role="INSCRICAO_COMPETICAO_ASSOCIACAO">
+        <PropertyRef Name="ASSOCIACAO_ID_ASSOCIACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSCRICAO_COMPETICAO_ASSOCIACAO_ibfk_4">
+    <End Role="ESPORTE" Type="bancodadosfprkeModel.Store.ESPORTE" Multiplicity="1" />
+    <End Role="INSCRICAO_COMPETICAO_ASSOCIACAO" Type="bancodadosfprkeModel.Store.INSCRICAO_COMPETICAO_ASSOCIACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESPORTE">
+        <PropertyRef Name="ID_ESPORTE" />
+      </Principal>
+      <Dependent Role="INSCRICAO_COMPETICAO_ASSOCIACAO">
+        <PropertyRef Name="ESPORTE_ID_ESPORTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSCRICAO_DO_ATLETA_ibfk_1">
+    <End Role="INSCRICAO_COMPETICAO_ASSOCIACAO" Type="bancodadosfprkeModel.Store.INSCRICAO_COMPETICAO_ASSOCIACAO" Multiplicity="1" />
+    <End Role="INSCRICAO_DO_ATLETA" Type="bancodadosfprkeModel.Store.INSCRICAO_DO_ATLETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INSCRICAO_COMPETICAO_ASSOCIACAO">
+        <PropertyRef Name="ID_INSCRICAO_COMPETICAO" />
+      </Principal>
+      <Dependent Role="INSCRICAO_DO_ATLETA">
+        <PropertyRef Name="INSCRICAO_COMPETICAO_ASSOCIACAO_ID_INSCRICAO_COMPETICAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSCRICAO_DO_ATLETA_ibfk_2">
+    <End Role="FILIADO" Type="bancodadosfprkeModel.Store.FILIADO" Multiplicity="0..1" />
+    <End Role="INSCRICAO_DO_ATLETA" Type="bancodadosfprkeModel.Store.INSCRICAO_DO_ATLETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FILIADO">
+        <PropertyRef Name="ID_FILIADO" />
+      </Principal>
+      <Dependent Role="INSCRICAO_DO_ATLETA">
+        <PropertyRef Name="FILIADO_ID_FILIADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSCRICAO_DO_ATLETA_ibfk_3">
+    <End Role="COMPETICAO" Type="bancodadosfprkeModel.Store.COMPETICAO" Multiplicity="1" />
+    <End Role="INSCRICAO_DO_ATLETA" Type="bancodadosfprkeModel.Store.INSCRICAO_DO_ATLETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPETICAO">
+        <PropertyRef Name="ID_COMPETICAO" />
+      </Principal>
+      <Dependent Role="INSCRICAO_DO_ATLETA">
+        <PropertyRef Name="COMPETICAO_ID_COMPETICAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSCRICAO_DO_ATLETA_ibfk_4">
+    <End Role="ASSOCIACAO" Type="bancodadosfprkeModel.Store.ASSOCIACAO" Multiplicity="1" />
+    <End Role="INSCRICAO_DO_ATLETA" Type="bancodadosfprkeModel.Store.INSCRICAO_DO_ATLETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ASSOCIACAO">
+        <PropertyRef Name="ID_ASSOCIACAO" />
+      </Principal>
+      <Dependent Role="INSCRICAO_DO_ATLETA">
+        <PropertyRef Name="ASSOCIACAO_ID_ASSOCIACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LOGIN_ibfk_1">
+    <End Role="ASSOCIACAO" Type="bancodadosfprkeModel.Store.ASSOCIACAO" Multiplicity="0..1" />
+    <End Role="LOGIN" Type="bancodadosfprkeModel.Store.LOGIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ASSOCIACAO">
+        <PropertyRef Name="ID_ASSOCIACAO" />
+      </Principal>
+      <Dependent Role="LOGIN">
+        <PropertyRef Name="ASSOCIACAO_ID_ASSOCIACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LOGIN_TELA_ibfk_1">
+    <End Role="LOGIN" Type="bancodadosfprkeModel.Store.LOGIN" Multiplicity="1" />
+    <End Role="LOGIN_TELA" Type="bancodadosfprkeModel.Store.LOGIN_TELA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOGIN">
+        <PropertyRef Name="ID_LOGIN" />
+      </Principal>
+      <Dependent Role="LOGIN_TELA">
+        <PropertyRef Name="LOGIN_ID_LOGIN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LOGIN_TELA_ibfk_2">
+    <End Role="TELAS" Type="bancodadosfprkeModel.Store.TELAS" Multiplicity="1" />
+    <End Role="LOGIN_TELA" Type="bancodadosfprkeModel.Store.LOGIN_TELA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TELAS">
+        <PropertyRef Name="IDTELAS" />
+      </Principal>
+      <Dependent Role="LOGIN_TELA">
+        <PropertyRef Name="TELAS_IDTELAS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RANKING_ibfk_1">
+    <End Role="FILIADO" Type="bancodadosfprkeModel.Store.FILIADO" Multiplicity="1" />
+    <End Role="RANKING" Type="bancodadosfprkeModel.Store.RANKING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FILIADO">
+        <PropertyRef Name="ID_FILIADO" />
+      </Principal>
+      <Dependent Role="RANKING">
+        <PropertyRef Name="FILIADO_ID_FILIADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TIPO_COMPETICAO_ibfk_1">
+    <End Role="ESPORTE" Type="bancodadosfprkeModel.Store.ESPORTE" Multiplicity="1" />
+    <End Role="TIPO_COMPETICAO" Type="bancodadosfprkeModel.Store.TIPO_COMPETICAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESPORTE">
+        <PropertyRef Name="ID_ESPORTE" />
+      </Principal>
+      <Dependent Role="TIPO_COMPETICAO">
+        <PropertyRef Name="ESPORTE_ID_ESPORTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

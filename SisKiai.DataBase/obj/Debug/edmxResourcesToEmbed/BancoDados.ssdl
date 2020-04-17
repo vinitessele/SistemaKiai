@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bancodadosModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="bancodadosModelStoreContainer">
+    <EntitySet Name="associacao" EntityType="bancodadosModel.Store.associacao" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="categoria" EntityType="bancodadosModel.Store.categoria" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="categoria_competicao" EntityType="bancodadosModel.Store.categoria_competicao" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="cidade" EntityType="bancodadosModel.Store.cidade" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="competicao" EntityType="bancodadosModel.Store.competicao" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="contasa_receber" EntityType="bancodadosModel.Store.contasa_receber" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="esporte" EntityType="bancodadosModel.Store.esporte" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="estado" EntityType="bancodadosModel.Store.estado" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="filiado" EntityType="bancodadosModel.Store.filiado" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="graduacao" EntityType="bancodadosModel.Store.graduacao" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="graduacao_filiado" EntityType="bancodadosModel.Store.graduacao_filiado" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="inscricao_categoria" EntityType="bancodadosModel.Store.inscricao_categoria" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="inscricao_competicao" EntityType="bancodadosModel.Store.inscricao_competicao" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="inscricao_filiado" EntityType="bancodadosModel.Store.inscricao_filiado" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="login" EntityType="bancodadosModel.Store.login" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="login_tela" EntityType="bancodadosModel.Store.login_tela" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="telas" EntityType="bancodadosModel.Store.telas" store:Type="Tables" Schema="bancodados" />
+    <EntitySet Name="tipo_contas" EntityType="bancodadosModel.Store.tipo_contas" store:Type="Tables" Schema="bancodados" />
+  </EntityContainer>
+  <EntityType Name="associacao">
+    <Key>
+      <PropertyRef Name="ID_ASSOCIACAO" />
+    </Key>
+    <Property Name="ID_ASSOCIACAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CIDADE_ID_CIDADE" Type="uint" Nullable="false" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="NOME_ASSOCIACAO" Type="varchar" MaxLength="100" />
+    <Property Name="ENDERECO_ASSOCIACAO" Type="varchar" MaxLength="150" />
+    <Property Name="NOME_RESPONSAVEL_ASSOCIACAO" Type="varchar" MaxLength="70" />
+    <Property Name="TELEFONE_FIXO_ASSOCIACAO" Type="varchar" MaxLength="15" />
+    <Property Name="TELEFONE_CELULAR_ASSOCIACAO" Type="varchar" MaxLength="15" />
+    <Property Name="EMAIL_ASSOCIACAO" Type="varchar" MaxLength="150" />
+    <Property Name="CNPJ_ASSOCIACAO" Type="varchar" MaxLength="18" />
+    <Property Name="INSCRICAO_ASSOCIACAO" Type="varchar" MaxLength="20" />
+    <Property Name="CEP_CIDADE" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="ID_CATEGORIA" />
+    </Key>
+    <Property Name="ID_CATEGORIA" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="GRADUACAO_ID_GRADUACAO" Type="uint" Nullable="false" />
+    <Property Name="DESCRICAO_CATEGORIA" Type="varchar" MaxLength="70" />
+    <Property Name="SEXO_CATEGORIA" Type="char" MaxLength="1" />
+    <Property Name="TIPO_CATEGORIA" Type="varchar" MaxLength="30" />
+    <Property Name="ALTURA_INICIAL_CATEGORIA" Type="decimal" />
+    <Property Name="ALTURA_FINAL_CATEGORIA" Type="decimal" />
+    <Property Name="PESO_INICIAL_CATEGORIA" Type="decimal" />
+    <Property Name="PESO_FINAL_CATEGORIA" Type="decimal" />
+    <Property Name="GRADUACAO_FINAL" Type="uint" />
+    <Property Name="STATUS_CATEGORIA" Type="bool" />
+    <Property Name="IDADE_INICIAL" Type="int" />
+    <Property Name="IDADE_FINAL" Type="int" />
+  </EntityType>
+  <EntityType Name="categoria_competicao">
+    <Key>
+      <PropertyRef Name="ID_CATEGORIA_COMPETICAO" />
+    </Key>
+    <Property Name="ID_CATEGORIA_COMPETICAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="COMPETICAO_ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="ID_COMPETICAO" Type="uint" />
+    <Property Name="ID_CATEGORIA" Type="uint" />
+  </EntityType>
+  <EntityType Name="cidade">
+    <Key>
+      <PropertyRef Name="ID_CIDADE" />
+    </Key>
+    <Property Name="ID_CIDADE" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOME_CIDADE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_ESTADO" Type="uint" />
+    <Property Name="CEP_CIDADE" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="competicao">
+    <Key>
+      <PropertyRef Name="ID_COMPETICAO" />
+      <PropertyRef Name="ESPORTE_ID_ESPORTE" />
+    </Key>
+    <Property Name="ID_COMPETICAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="NOME_COMPETICAO" Type="varchar" MaxLength="70" />
+    <Property Name="DESCRICAO_COMPETICAO" Type="varchar" MaxLength="70" />
+    <Property Name="ID_CIDADE" Type="uint" />
+    <Property Name="ENDERECO_COMPETICAO" Type="varchar" MaxLength="70" />
+    <Property Name="CEP_COMPETICAO" Type="varchar" MaxLength="10" />
+    <Property Name="DATA_COMPETICAO" Type="date" />
+    <Property Name="CARTAZ_COMPETICAO" Type="bit" />
+    <Property Name="RESPONSAVEL" Type="varchar" MaxLength="50" />
+    <Property Name="TELEFONE_CELULAR" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="DATA_LIMITE_INSCRICAO" Type="date" />
+    <Property Name="VALOR_COMPETICAO" Type="decimal" />
+    <Property Name="STATUS_COMPETICAO" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="contasa_receber">
+    <Key>
+      <PropertyRef Name="ID_CONTASRECEBER" />
+    </Key>
+    <Property Name="ID_CONTASRECEBER" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FILIADO_ID_FILIADO" Type="uint" Nullable="false" />
+    <Property Name="TIPO_CONTAS_ID_TIPOCONTAS" Type="uint" Nullable="false" />
+    <Property Name="DATA_RECEBIMENTO" Type="decimal" />
+    <Property Name="VALOR_RECEBIMENTO" Type="decimal" />
+    <Property Name="STATUS_RECEBIMENTO" Type="char" MaxLength="1" />
+    <Property Name="DESCRICAO_RECEBIMENTO" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="esporte">
+    <Key>
+      <PropertyRef Name="ID_ESPORTE" />
+    </Key>
+    <Property Name="ID_ESPORTE" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOME_ESPORTE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="estado">
+    <Key>
+      <PropertyRef Name="ID_ESTADO" />
+    </Key>
+    <Property Name="ID_ESTADO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOME_ESTADO" Type="varchar" MaxLength="70" />
+    <Property Name="SIGLA_ESTADO" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="filiado">
+    <Key>
+      <PropertyRef Name="ID_FILIADO" />
+    </Key>
+    <Property Name="ID_FILIADO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ASSOCIACAO_ID_ASSOCIACAO" Type="uint" Nullable="false" />
+    <Property Name="CIDADE_ID_CIDADE" Type="uint" Nullable="false" />
+    <Property Name="NOME_FILIADO" Type="varchar" MaxLength="50" />
+    <Property Name="ENDERECO_FILIADO" Type="varchar" MaxLength="70" />
+    <Property Name="TELEFONE_FIXO_FILIADO" Type="varchar" MaxLength="15" />
+    <Property Name="TELEFONE_CELULAR_FILIADO" Type="varchar" MaxLength="15" />
+    <Property Name="EMAIL_FILIADO" Type="varchar" MaxLength="70" />
+    <Property Name="CPF_FILIADO" Type="varchar" MaxLength="14" />
+    <Property Name="RG_FILIADO" Type="varchar" MaxLength="20" />
+    <Property Name="DATA_NASCIMENTO_FILIADO" Type="date" />
+    <Property Name="IDADE_FILIADO" Type="uint" />
+    <Property Name="PESO_FILIADO" Type="decimal" />
+    <Property Name="ALTURA_FILIADO" Type="decimal" />
+    <Property Name="SEXO_FILIADO" Type="char" MaxLength="1" />
+    <Property Name="TIPO_FILIADO" Type="char" MaxLength="10" />
+    <Property Name="CEP_CIDADE" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="graduacao">
+    <Key>
+      <PropertyRef Name="ID_GRADUACAO" />
+    </Key>
+    <Property Name="ID_GRADUACAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="DESCRICAO_GRADUACAO" Type="varchar" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="graduacao_filiado">
+    <Key>
+      <PropertyRef Name="ID_GRADUACAO_FILIADO" />
+    </Key>
+    <Property Name="ID_GRADUACAO_FILIADO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GRADUACAO_ID_GRADUACAO" Type="uint" Nullable="false" />
+    <Property Name="DESCRICAO_GRADUACAO" Type="varchar" MaxLength="70" />
+    <Property Name="DATA_GRADUACAO" Type="date" />
+    <Property Name="ID_FILIADO" Type="uint" />
+  </EntityType>
+  <EntityType Name="inscricao_categoria">
+    <Key>
+      <PropertyRef Name="ID_INSCRICAO_CATEGORIA" />
+    </Key>
+    <Property Name="ID_INSCRICAO_CATEGORIA" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CATEGORIA_COMPETICAO_ID_CATEGORIA_COMPETICAO" Type="uint" Nullable="false" />
+    <Property Name="INSCRICAO_FILIADO_IDINSCRICAOFILIADO" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="inscricao_competicao">
+    <Key>
+      <PropertyRef Name="ID_INSCRICAO_COMPETICAO" />
+    </Key>
+    <Property Name="ID_INSCRICAO_COMPETICAO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ASSOCIACAO_ID_ASSOCIACAO" Type="uint" Nullable="false" />
+    <Property Name="LOGIN_ID_LOGIN" Type="uint" Nullable="false" />
+    <Property Name="COMPETICAO_ESPORTE_ID_ESPORTE" Type="uint" Nullable="false" />
+    <Property Name="COMPETICAO_ID_COMPETICAO" Type="uint" Nullable="false" />
+    <Property Name="VALOR_INSCRICAO" Type="decimal" />
+    <Property Name="DATA_INSCRICAO" Type="date" />
+    <Property Name="CONFIRMACAO_PAGAMENTO" Type="decimal" />
+    <Property Name="STATUS_INSCRICAO" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="inscricao_filiado">
+    <Key>
+      <PropertyRef Name="IDINSCRICAOFILIADO" />
+    </Key>
+    <Property Name="IDINSCRICAOFILIADO" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FILIADO_ID_FILIADO" Type="uint" Nullable="false" />
+    <Property Name="INSCRICAO_COMPETICAO_ID_INSCRICAO_COMPETICAO" Type="uint" Nullable="false" />
+    <Property Name="VALOR_INSCRICAO" Type="decimal" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="ID_LOGIN" />
+    </Key>
+    <Property Name="ID_LOGIN" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ASSOCIACAO_ID_ASSOCIACAO" Type="uint" Nullable="false" />
+    <Property Name="NOME_LOGIN" Type="varchar" MaxLength="50" />
+    <Property Name="USUARIO_LOGIN" Type="varchar" MaxLength="50" />
+    <Property Name="SENHA_LOGIN" Type="varchar" MaxLength="50" />
+    <Property Name="STATUS_LOGIN" Type="char" MaxLength="1" />
+    <Property Name="ADMIN_LOGIN" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="login_tela">
+    <Key>
+      <PropertyRef Name="IDLOGINTELA" />
+      <PropertyRef Name="LOGIN_ID_LOGIN" />
+    </Key>
+    <Property Name="IDLOGINTELA" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LOGIN_ID_LOGIN" Type="uint" Nullable="false" />
+    <Property Name="TELAS_IDTELAS" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="telas">
+    <Key>
+      <PropertyRef Name="IDTELAS" />
+    </Key>
+    <Property Name="IDTELAS" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOME_TELA" Type="varchar" MaxLength="50" />
+    <Property Name="ENDERECO_TELAS" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tipo_contas">
+    <Key>
+      <PropertyRef Name="ID_TIPOCONTAS" />
+    </Key>
+    <Property Name="ID_TIPOCONTAS" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRICAO_TIPO_CONTAS" Type="varchar" MaxLength="70" />
+    <Property Name="TIPO_CONTAS" Type="char" MaxLength="1" />
+  </EntityType>
+</Schema>

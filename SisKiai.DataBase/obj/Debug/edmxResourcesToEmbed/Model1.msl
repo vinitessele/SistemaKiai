@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bancodadosModel1StoreContainer" CdmEntityContainer="bancodadosEntities">
+    <EntitySetMapping Name="associacao">
+      <EntityTypeMapping TypeName="bancodadosModel1.associacao">
+        <MappingFragment StoreEntitySet="associacao">
+          <ScalarProperty Name="ID_ASSOCIACAO" ColumnName="ID_ASSOCIACAO" />
+          <ScalarProperty Name="CIDADE_ID_CIDADE" ColumnName="CIDADE_ID_CIDADE" />
+          <ScalarProperty Name="ESPORTE_ID_ESPORTE" ColumnName="ESPORTE_ID_ESPORTE" />
+          <ScalarProperty Name="NOME_ASSOCIACAO" ColumnName="NOME_ASSOCIACAO" />
+          <ScalarProperty Name="ENDERECO_ASSOCIACAO" ColumnName="ENDERECO_ASSOCIACAO" />
+          <ScalarProperty Name="NOME_RESPONSAVEL_ASSOCIACAO" ColumnName="NOME_RESPONSAVEL_ASSOCIACAO" />
+          <ScalarProperty Name="TELEFONE_FIXO_ASSOCIACAO" ColumnName="TELEFONE_FIXO_ASSOCIACAO" />
+          <ScalarProperty Name="TELEFONE_CELULAR_ASSOCIACAO" ColumnName="TELEFONE_CELULAR_ASSOCIACAO" />
+          <ScalarProperty Name="EMAIL_ASSOCIACAO" ColumnName="EMAIL_ASSOCIACAO" />
+          <ScalarProperty Name="CNPJ_ASSOCIACAO" ColumnName="CNPJ_ASSOCIACAO" />
+          <ScalarProperty Name="INSCRICAO_ASSOCIACAO" ColumnName="INSCRICAO_ASSOCIACAO" />
+          <ScalarProperty Name="CEP_CIDADE" ColumnName="CEP_CIDADE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categoria">
+      <EntityTypeMapping TypeName="bancodadosModel1.categoria">
+        <MappingFragment StoreEntitySet="categoria">
+          <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
+          <ScalarProperty Name="ESPORTE_ID_ESPORTE" ColumnName="ESPORTE_ID_ESPORTE" />
+          <ScalarProperty Name="GRADUACAO_ID_GRADUACAO" ColumnName="GRADUACAO_ID_GRADUACAO" />
+          <ScalarProperty Name="DESCRICAO_CATEGORIA" ColumnName="DESCRICAO_CATEGORIA" />
+          <ScalarProperty Name="SEXO_CATEGORIA" ColumnName="SEXO_CATEGORIA" />
+          <ScalarProperty Name="TIPO_CATEGORIA" ColumnName="TIPO_CATEGORIA" />
+          <ScalarProperty Name="ALTURA_INICIAL_CATEGORIA" ColumnName="ALTURA_INICIAL_CATEGORIA" />
+          <ScalarProperty Name="ALTURA_FINAL_CATEGORIA" ColumnName="ALTURA_FINAL_CATEGORIA" />
+          <ScalarProperty Name="PESO_INICIAL_CATEGORIA" ColumnName="PESO_INICIAL_CATEGORIA" />
+          <ScalarProperty Name="PESO_FINAL_CATEGORIA" ColumnName="PESO_FINAL_CATEGORIA" />
+          <ScalarProperty Name="GRADUACAO_FINAL" ColumnName="GRADUACAO_FINAL" />
+          <ScalarProperty Name="STATUS_CATEGORIA" ColumnName="STATUS_CATEGORIA" />
+          <ScalarProperty Name="IDADE_INICIAL" ColumnName="IDADE_INICIAL" />
+          <ScalarProperty Name="IDADE_FINAL" ColumnName="IDADE_FINAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categoria_competicao">
+      <EntityTypeMapping TypeName="bancodadosModel1.categoria_competicao">
+        <MappingFragment StoreEntitySet="categoria_competicao">
+          <ScalarProperty Name="ID_CATEGORIA_COMPETICAO" ColumnName="ID_CATEGORIA_COMPETICAO" />
+          <ScalarProperty Name="COMPETICAO_ESPORTE_ID_ESPORTE" ColumnName="COMPETICAO_ESPORTE_ID_ESPORTE" />
+          <ScalarProperty Name="ID_COMPETICAO" ColumnName="ID_COMPETICAO" />
+          <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cidade">
+      <EntityTypeMapping TypeName="bancodadosModel1.cidade">
+        <MappingFragment StoreEntitySet="cidade">
+          <ScalarProperty Name="ID_CIDADE" ColumnName="ID_CIDADE" />
+          <ScalarProperty Name="NOME_CIDADE" ColumnName="NOME_CIDADE" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="CEP_CIDADE" ColumnName="CEP_CIDADE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="competicao">
+      <EntityTypeMapping TypeName="bancodadosModel1.competicao">
+        <MappingFragment StoreEntitySet="competicao">
+          <ScalarProperty Name="ID_COMPETICAO" ColumnName="ID_COMPETICAO" />
+          <ScalarProperty Name="ESPORTE_ID_ESPORTE" ColumnName="ESPORTE_ID_ESPORTE" />
+          <ScalarProperty Name="NOME_COMPETICAO" ColumnName="NOME_COMPETICAO" />
+          <ScalarProperty Name="DESCRICAO_COMPETICAO" ColumnName="DESCRICAO_COMPETICAO" />
+          <ScalarProperty Name="ID_CIDADE" ColumnName="ID_CIDADE" />
+          <ScalarProperty Name="ENDERECO_COMPETICAO" ColumnName="ENDERECO_COMPETICAO" />
+          <ScalarProperty Name="CEP_COMPETICAO" ColumnName="CEP_COMPETICAO" />
+          <ScalarProperty Name="DATA_COMPETICAO" ColumnName="DATA_COMPETICAO" />
+          <ScalarProperty Name="CARTAZ_COMPETICAO" ColumnName="CARTAZ_COMPETICAO" />
+          <ScalarProperty Name="RESPONSAVEL" ColumnName="RESPONSAVEL" />
+          <ScalarProperty Name="TELEFONE_CELULAR" ColumnName="TELEFONE_CELULAR" />
+          <ScalarProperty Name="DATA_LIMITE_INSCRICAO" ColumnName="DATA_LIMITE_INSCRICAO" />
+          <ScalarProperty Name="VALOR_COMPETICAO" ColumnName="VALOR_COMPETICAO" />
+          <ScalarProperty Name="STATUS_COMPETICAO" ColumnName="STATUS_COMPETICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contasa_receber">
+      <EntityTypeMapping TypeName="bancodadosModel1.contasa_receber">
+        <MappingFragment StoreEntitySet="contasa_receber">
+          <ScalarProperty Name="ID_CONTASRECEBER" ColumnName="ID_CONTASRECEBER" />
+          <ScalarProperty Name="FILIADO_ID_FILIADO" ColumnName="FILIADO_ID_FILIADO" />
+          <ScalarProperty Name="TIPO_CONTAS_ID_TIPOCONTAS" ColumnName="TIPO_CONTAS_ID_TIPOCONTAS" />
+          <ScalarProperty Name="DATA_RECEBIMENTO" ColumnName="DATA_RECEBIMENTO" />
+          <ScalarProperty Name="VALOR_RECEBIMENTO" ColumnName="VALOR_RECEBIMENTO" />
+          <ScalarProperty Name="STATUS_RECEBIMENTO" ColumnName="STATUS_RECEBIMENTO" />
+          <ScalarProperty Name="DESCRICAO_RECEBIMENTO" ColumnName="DESCRICAO_RECEBIMENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="esporte">
+      <EntityTypeMapping TypeName="bancodadosModel1.esporte">
+        <MappingFragment StoreEntitySet="esporte">
+          <ScalarProperty Name="ID_ESPORTE" ColumnName="ID_ESPORTE" />
+          <ScalarProperty Name="NOME_ESPORTE" ColumnName="NOME_ESPORTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estado">
+      <EntityTypeMapping TypeName="bancodadosModel1.estado">
+        <MappingFragment StoreEntitySet="estado">
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="NOME_ESTADO" ColumnName="NOME_ESTADO" />
+          <ScalarProperty Name="SIGLA_ESTADO" ColumnName="SIGLA_ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="filiado">
+      <EntityTypeMapping TypeName="bancodadosModel1.filiado">
+        <MappingFragment StoreEntitySet="filiado">
+          <ScalarProperty Name="ID_FILIADO" ColumnName="ID_FILIADO" />
+          <ScalarProperty Name="ASSOCIACAO_ID_ASSOCIACAO" ColumnName="ASSOCIACAO_ID_ASSOCIACAO" />
+          <ScalarProperty Name="CIDADE_ID_CIDADE" ColumnName="CIDADE_ID_CIDADE" />
+          <ScalarProperty Name="NOME_FILIADO" ColumnName="NOME_FILIADO" />
+          <ScalarProperty Name="ENDERECO_FILIADO" ColumnName="ENDERECO_FILIADO" />
+          <ScalarProperty Name="TELEFONE_FIXO_FILIADO" ColumnName="TELEFONE_FIXO_FILIADO" />
+          <ScalarProperty Name="TELEFONE_CELULAR_FILIADO" ColumnName="TELEFONE_CELULAR_FILIADO" />
+          <ScalarProperty Name="EMAIL_FILIADO" ColumnName="EMAIL_FILIADO" />
+          <ScalarProperty Name="CPF_FILIADO" ColumnName="CPF_FILIADO" />
+          <ScalarProperty Name="RG_FILIADO" ColumnName="RG_FILIADO" />
+          <ScalarProperty Name="DATA_NASCIMENTO_FILIADO" ColumnName="DATA_NASCIMENTO_FILIADO" />
+          <ScalarProperty Name="IDADE_FILIADO" ColumnName="IDADE_FILIADO" />
+          <ScalarProperty Name="PESO_FILIADO" ColumnName="PESO_FILIADO" />
+          <ScalarProperty Name="ALTURA_FILIADO" ColumnName="ALTURA_FILIADO" />
+          <ScalarProperty Name="SEXO_FILIADO" ColumnName="SEXO_FILIADO" />
+          <ScalarProperty Name="TIPO_FILIADO" ColumnName="TIPO_FILIADO" />
+          <ScalarProperty Name="CEP_CIDADE" ColumnName="CEP_CIDADE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="graduacao">
+      <EntityTypeMapping TypeName="bancodadosModel1.graduacao">
+        <MappingFragment StoreEntitySet="graduacao">
+          <ScalarProperty Name="ID_GRADUACAO" ColumnName="ID_GRADUACAO" />
+          <ScalarProperty Name="ESPORTE_ID_ESPORTE" ColumnName="ESPORTE_ID_ESPORTE" />
+          <ScalarProperty Name="DESCRICAO_GRADUACAO" ColumnName="DESCRICAO_GRADUACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="graduacao_filiado">
+      <EntityTypeMapping TypeName="bancodadosModel1.graduacao_filiado">
+        <MappingFragment StoreEntitySet="graduacao_filiado">
+          <ScalarProperty Name="ID_GRADUACAO_FILIADO" ColumnName="ID_GRADUACAO_FILIADO" />
+          <ScalarProperty Name="GRADUACAO_ID_GRADUACAO" ColumnName="GRADUACAO_ID_GRADUACAO" />
+          <ScalarProperty Name="DESCRICAO_GRADUACAO" ColumnName="DESCRICAO_GRADUACAO" />
+          <ScalarProperty Name="DATA_GRADUACAO" ColumnName="DATA_GRADUACAO" />
+          <ScalarProperty Name="ID_FILIADO" ColumnName="ID_FILIADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inscricao_categoria">
+      <EntityTypeMapping TypeName="bancodadosModel1.inscricao_categoria">
+        <MappingFragment StoreEntitySet="inscricao_categoria">
+          <ScalarProperty Name="ID_INSCRICAO_CATEGORIA" ColumnName="ID_INSCRICAO_CATEGORIA" />
+          <ScalarProperty Name="CATEGORIA_COMPETICAO_ID_CATEGORIA_COMPETICAO" ColumnName="CATEGORIA_COMPETICAO_ID_CATEGORIA_COMPETICAO" />
+          <ScalarProperty Name="INSCRICAO_FILIADO_IDINSCRICAOFILIADO" ColumnName="INSCRICAO_FILIADO_IDINSCRICAOFILIADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inscricao_competicao">
+      <EntityTypeMapping TypeName="bancodadosModel1.inscricao_competicao">
+        <MappingFragment StoreEntitySet="inscricao_competicao">
+          <ScalarProperty Name="ID_INSCRICAO_COMPETICAO" ColumnName="ID_INSCRICAO_COMPETICAO" />
+          <ScalarProperty Name="ASSOCIACAO_ID_ASSOCIACAO" ColumnName="ASSOCIACAO_ID_ASSOCIACAO" />
+          <ScalarProperty Name="LOGIN_ID_LOGIN" ColumnName="LOGIN_ID_LOGIN" />
+          <ScalarProperty Name="COMPETICAO_ESPORTE_ID_ESPORTE" ColumnName="COMPETICAO_ESPORTE_ID_ESPORTE" />
+          <ScalarProperty Name="COMPETICAO_ID_COMPETICAO" ColumnName="COMPETICAO_ID_COMPETICAO" />
+          <ScalarProperty Name="VALOR_INSCRICAO" ColumnName="VALOR_INSCRICAO" />
+          <ScalarProperty Name="DATA_INSCRICAO" ColumnName="DATA_INSCRICAO" />
+          <ScalarProperty Name="CONFIRMACAO_PAGAMENTO" ColumnName="CONFIRMACAO_PAGAMENTO" />
+          <ScalarProperty Name="STATUS_INSCRICAO" ColumnName="STATUS_INSCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inscricao_filiado">
+      <EntityTypeMapping TypeName="bancodadosModel1.inscricao_filiado">
+        <MappingFragment StoreEntitySet="inscricao_filiado">
+          <ScalarProperty Name="IDINSCRICAOFILIADO" ColumnName="IDINSCRICAOFILIADO" />
+          <ScalarProperty Name="FILIADO_ID_FILIADO" ColumnName="FILIADO_ID_FILIADO" />
+          <ScalarProperty Name="INSCRICAO_COMPETICAO_ID_INSCRICAO_COMPETICAO" ColumnName="INSCRICAO_COMPETICAO_ID_INSCRICAO_COMPETICAO" />
+          <ScalarProperty Name="VALOR_INSCRICAO" ColumnName="VALOR_INSCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="login">
+      <EntityTypeMapping TypeName="bancodadosModel1.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+          <ScalarProperty Name="ASSOCIACAO_ID_ASSOCIACAO" ColumnName="ASSOCIACAO_ID_ASSOCIACAO" />
+          <ScalarProperty Name="NOME_LOGIN" ColumnName="NOME_LOGIN" />
+          <ScalarProperty Name="USUARIO_LOGIN" ColumnName="USUARIO_LOGIN" />
+          <ScalarProperty Name="SENHA_LOGIN" ColumnName="SENHA_LOGIN" />
+          <ScalarProperty Name="STATUS_LOGIN" ColumnName="STATUS_LOGIN" />
+          <ScalarProperty Name="ADMIN_LOGIN" ColumnName="ADMIN_LOGIN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="login_tela">
+      <EntityTypeMapping TypeName="bancodadosModel1.login_tela">
+        <MappingFragment StoreEntitySet="login_tela">
+          <ScalarProperty Name="IDLOGINTELA" ColumnName="IDLOGINTELA" />
+          <ScalarProperty Name="LOGIN_ID_LOGIN" ColumnName="LOGIN_ID_LOGIN" />
+          <ScalarProperty Name="TELAS_IDTELAS" ColumnName="TELAS_IDTELAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="telas">
+      <EntityTypeMapping TypeName="bancodadosModel1.telas">
+        <MappingFragment StoreEntitySet="telas">
+          <ScalarProperty Name="IDTELAS" ColumnName="IDTELAS" />
+          <ScalarProperty Name="NOME_TELA" ColumnName="NOME_TELA" />
+          <ScalarProperty Name="ENDERECO_TELAS" ColumnName="ENDERECO_TELAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_contas">
+      <EntityTypeMapping TypeName="bancodadosModel1.tipo_contas">
+        <MappingFragment StoreEntitySet="tipo_contas">
+          <ScalarProperty Name="ID_TIPOCONTAS" ColumnName="ID_TIPOCONTAS" />
+          <ScalarProperty Name="DESCRICAO_TIPO_CONTAS" ColumnName="DESCRICAO_TIPO_CONTAS" />
+          <ScalarProperty Name="TIPO_CONTAS1" ColumnName="TIPO_CONTAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
